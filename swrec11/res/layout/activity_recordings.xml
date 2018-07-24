@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/Parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+            <ImageButton
+                android:id="@+id/Facebookbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintRight_toLeftOf="@+id/child"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/untitled"
+                android:onClick="writeExternalStorage"
+                />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/child"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Facebookbutton">
+
+
+                <TextView
+                    android:id="@+id/fbtextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.0"
+                    android:nestedScrollingEnabled="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/Facebookbutton" />
+            </android.support.v4.widget.NestedScrollView>
+
+            <ImageButton
+                android:id="@+id/Snap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/child"
+                app:srcCompat="@drawable/snapchat" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/child2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="36dp"
+                android:fillViewport="true"
+
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Snap"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/snaptextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.0"
+                    android:nestedScrollingEnabled="true"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="invisible"
+
+
+                    app:layout_constraintTop_toTopOf="@+id/Snap" />
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <ImageButton
+                android:id="@+id/Twit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/child2"
+                app:srcCompat="@drawable/twit" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/child3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="36dp"
+                android:fillViewport="true"
+
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Twit"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/twittextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.0"
+                    android:nestedScrollingEnabled="true"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="invisible"
+
+
+                    app:layout_constraintTop_toTopOf="@+id/Twit" />
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <ImageButton
+                android:id="@+id/Mess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/child3"
+                app:srcCompat="@drawable/messenger" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/child4"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="36dp"
+                android:fillViewport="true"
+
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Mess"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/messtextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.0"
+                    android:nestedScrollingEnabled="true"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="invisible"
+
+
+                    app:layout_constraintTop_toTopOf="@+id/Mess" />
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <ImageButton
+                android:id="@+id/insta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/child4"
+                app:srcCompat="@drawable/ig" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/child5"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="36dp"
+                android:fillViewport="true"
+
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/insta">
+
+
+                <TextView
+                    android:id="@+id/instatextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.0"
+                    android:nestedScrollingEnabled="true"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="invisible"
+
+
+                    app:layout_constraintTop_toBottomOf="@+id/insta" />
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/actionModeSplitBackground"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <TextView
+                android:layout_width="146dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Recordings"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                tools:text="@string/title_activity_recordings" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
